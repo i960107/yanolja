@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="naverIdLogin">
+      <a id="naverIdLogin_loginButton" href="javascript:loginWithNaver()">
+        <img
+          src="https://static.nid.naver.com/oauth/big_g.PNG?version=js-2.0.1"
+          height="60"
+        />
+      </a>
+    </div>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      var naverLogin = new naver.LoginWithNaverId({
+        clientId: "fsyNzihBFyYrvGUTMr3i",
+        callbackUrl: "{{host}}/api",
+        isPopup: false,
+        loginButton: { color: "green", type: 3, height: 60 },
+      });
+
+      var naver_id_login = new naver_id_login("fsyNzihBFyYrvGUTMr3i","{{host}}/api");
+
+      function loginWithNaver(){
+       naverLogin.init();
+      }
+      window.addEventListener("load", function () {
+          if (naver_id_login.oauthParams.access_token != null) {
+            fetch(
+              "{{host}}/api/user/login/naver?accessToken=" +
+               naver_id_login.oauthParams.access_token
+            );
+          }
+      });
+    </script>
+    <script>
+      Kakao.init("a6f50eee1c77c0a79a55e68a2cb4c1c8");
+      function loginWithKakao() {
+        Kakao.Auth.login({
+          success: function (authObj) {
+            fetch(
+              "{{host}}/api/user/login/kakao?accessToken=" +
+                authObj.access_token
+            );
+          },
+          fail: function (err) {
+            console.log(err);
+          },
+        });
+      }
+    </script>
+    <a id="custom-login-btn" href="javascript:loginWithKakao()">
+      <img
+        src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
+        width="222"
+      />
+    </a>
+  </body>
+</html>

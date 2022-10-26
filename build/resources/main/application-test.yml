@@ -1,0 +1,25 @@
+server:
+  domain: https://test.esther-softsquared.shop
+  port: 9001
+
+spring:
+  application:
+    name: demo
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        ddl-auto: update
+        show_sql: true
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://esther-softsquared.comborzrmicf.ap-northeast-2.rds.amazonaws.com:3306/esther_softsquared?autoReconnect=true # 변경해주세요
+    username: esther # 변경해주세요
+    password: ${DATASOURCE_PASSWORD} # 변경해주세요
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8버전
+    # driver-class-name: com.mysql.jdbc.Driver # mysql 5버전
+  sentry:
+      dsn: https://b62760d5563340528fd8810911648dd2@o954041.ingest.sentry.io/5903017
+      environment: test
