@@ -16,9 +16,8 @@ Spring Boot, JPA, JAVA, Kotlin, AWS EC2, AWS RDS, AWS S3, Nginx, Ubuntu, Github,
 + Retrofit, glide, gson등의 라이브러리를 활용하여 API 연동
 
 ## 💫ERD
-1. 야놀자의 대표 기능인 숙소(hotel, motel) 조회하기/예약하기/리뷰쓰기/찜하기/결제하기 기능만을 대상으로 한 데이터베이스이다.
-
-2. 숙소 유형별(모텔,호텔, 게스트하우스 등)에 따라 필요한 속성이 다르므로 개별의 테이블로 관리한다. 현재 데이터테이블에는 야놀자에서 가장 많이 예약되는 숙소 유형인 모텔 및 호텔에 관련된 테이블만 추가되어 있다.
++  야놀자의 대표 기능인 숙소(hotel, motel) 조회하기/예약하기/리뷰쓰기/찜하기/결제하기 기능만을 대상으로 한 데이터베이스이다.
++ 숙소 유형별(모텔,호텔, 게스트하우스 등)에 따라 필요한 속성이 다르므로 개별의 테이블로 관리한다. 현재 데이터테이블에는 야놀자에서 가장 많이 예약되는 숙소 유형인 모텔 및 호텔에 관련된 테이블만 추가되어 있다.
 + 총 19개 테이블 포함
     + 유저 정보를 담은 테이블(일반 유저, 비지니스 유저): user, bussiness user
     + 호텔과 관련된 테이블                       : hotel, hotel_room, hotel_image, hotel_room_image, hotel_booking
@@ -30,13 +29,12 @@ Spring Boot, JPA, JAVA, Kotlin, AWS EC2, AWS RDS, AWS S3, Nginx, Ubuntu, Github,
     + 유저가 남긴 숙소 리뷰 정보를 담은 테이블        : review,reviewReply  
     + 이미지 경로를 담은 테이블                    : image
     + 숙소 태그와 관련된 정보를 담은 테이블           : tag, accommodation_tag
-+ !클릭 필요
++ ERD 자세히 보려면 클릭!
 <img src="./docs/yanolja-ERD.png" width="2000px" height="600px" title="erd"/>
 
 ## 💫API명세
-+ !클릭 필요  
-+ 총 25개 API 
-https://docs.google.com/spreadsheets/d/1w7Z3xspfSeve4rfXSonxgaKw6YGtaYOJqTY23W1Ge-M/edit#gid=686050006
++ 총 25개 AP
++ [API 명세 보러가기](https://docs.google.com/spreadsheets/d/1w7Z3xspfSeve4rfXSonxgaKw6YGtaYOJqTY23W1Ge-M/edit#gid=686050006)
 
 ## ✨Structure
 ```text
