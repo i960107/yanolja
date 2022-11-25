@@ -20,7 +20,8 @@ Spring Boot, JPA, JAVA, Kotlin, AWS EC2, AWS RDS, AWS S3, Nginx, Ubuntu, Github,
 <img src="./docs/yanolja-ERD.png" width="2000px" height="600px" title="erd"/>
 
 ## 💫API명세
-+ !클릭 필요
++ !클릭 필요  
++ 총 25개 API 
 https://docs.google.com/spreadsheets/d/1w7Z3xspfSeve4rfXSonxgaKw6YGtaYOJqTY23W1Ge-M/edit#gid=686050006
 
 ## ✨Structure
