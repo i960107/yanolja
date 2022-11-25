@@ -1,8 +1,8 @@
-# 📱숙소 예약 안드로이드 앱 제작 - 2021.06(2주, 개인 프로젝트)
-
-숙소 예약 어플 야놀자를 벤치마킹한 안드로이드 앱 제작 개인 프로젝트
+# 📱숙소 예약 안드로이드 앱 제작 
+- 숙소 예약 어플 **야놀자**를 벤치마킹한 안드로이드 앱 제작 개인 프로젝트
+- 2021.06(2주, 개인 프로젝트)
 ## 👩‍ 💻Tech Used
-Spring Boot, JPA, JAVA, Kotlin, AWS EC2, AWS RDS, AWS S3, Nginx, Ubuntu, Github, Android, Retrofit
+```Spring Boot```, ```JPA```, ```JAVA```, ```Kotlin```, ```AWS EC2```, ```AWS RDS```, ```AWS S3```, ```Nginx```, ```Ubuntu```, ```Github```, ```Android```, ```Retrofit```
 ## ✔️ 프로젝트 내용
 ### 백엔드
 + AWS EC2를 활용하여 Linux(Ubuntu)기반 테스트 서버 및 프로덕트 서버 구축.
@@ -14,6 +14,13 @@ Spring Boot, JPA, JAVA, Kotlin, AWS EC2, AWS RDS, AWS S3, Nginx, Ubuntu, Github,
 + CustomDialog 구현
 + ActivityLifeCycle 및 SharedPreference를 활용하여 자동 로그인 구현
 + Retrofit, glide, gson등의 라이브러리를 활용하여 API 연동
+### 구현 기능
++ 숙소 조건 조회 및 상세 조회
++ 숙소 등록
++ 숙소 북마크
++ 리뷰 작성 및 조회
++ 일반 유저/ 비지니스 유저 로그인
++ 쿠폰 조회 및 적용
 
 ## 💫ERD
 +  야놀자의 대표 기능인 숙소(hotel, motel) 조회하기/예약하기/리뷰쓰기/찜하기/결제하기 기능만을 대상으로 한 데이터베이스이다.
@@ -29,8 +36,6 @@ Spring Boot, JPA, JAVA, Kotlin, AWS EC2, AWS RDS, AWS S3, Nginx, Ubuntu, Github,
     + 유저가 남긴 숙소 리뷰 정보를 담은 테이블        : review,reviewReply  
     + 이미지 경로를 담은 테이블                    : image
     + 숙소 태그와 관련된 정보를 담은 테이블           : tag, accommodation_tag
-+ ERD 자세히 보려면 클릭!
-<img src="./docs/yanolja-ERD.png" width="2000px" height="600px" title="erd"/>
 
 ## 💫API명세
 + 총 25개 AP
